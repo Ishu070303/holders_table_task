@@ -1,17 +1,18 @@
-import React, { Fragment, useEffect, useState} from "react";
-import { HoldingTableData } from "./components";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
-// import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from "@mui/material";
-import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 
 import { styled } from '@mui/material/styles';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import { HoldingTableData } from "./components";
 import { Box, Typography } from "@mui/material";
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
-// import Typography from '@mui/material/Typography';
 
+
+
+//Accordion Banner By Matarial-UI!
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -24,6 +25,7 @@ const Accordion = styled((props) => (
   },
 }));
 
+//Here is the accordion Summary, Where I will write my all assets classes!
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
@@ -40,6 +42,7 @@ const AccordionSummary = styled((props) => (
   },
 }));
 
+//Inside the Accordion I will pass my data as a Table!
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
@@ -47,6 +50,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const App = () => {
   const [holdingData, setHoldingData] = useState([]);
 
+  //Here I'm fetching the data only once, when the page loads
   useEffect(() => {
     axios
       .get("https://canopy-frontend-task.vercel.app/api/holdings")
@@ -60,6 +64,7 @@ const App = () => {
 
   // console.log(holdingData);
 
+  //It's a function where I created the object, inside that there are subarray that are named as the same as assets-class that will store the total! 
   const GroupHolderHandler = () => {
     const groupedHolding = {
       "Real Estate": [],
