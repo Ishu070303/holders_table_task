@@ -24,8 +24,8 @@ const HoldingsTableData = ({ data }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((holding) => (
-            <TableRow key={holding.ticker}>
+          {data.map((holding, index) => (
+            <TableRow key={holding.ticker} sx={{ backgroundColor: index % 2 === 0 ? '#e8f4f8' : 'white'}}>
               <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.name}</TableCell>
               <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.ticker}</TableCell>
               <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.avg_price}</TableCell>
