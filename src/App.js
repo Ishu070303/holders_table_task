@@ -27,6 +27,7 @@ const App = () => {
       "Bond": [],
       "Equity": [],
       "Fund": [],
+      "Loan": [],
     };
 
     holdingData.forEach((holding) => {
@@ -43,11 +44,11 @@ const App = () => {
   // console.log(groupedHolding);
 
   return (
-    <Box sx={{ width: '95vw',height: '95vh' , margin: 'auto', marginTop: '1rem', boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;'}}>
+    <Box sx={{ backgroundColor: '#e8f4f8', width: '95vw', minHeight: '95vh' , margin: 'auto', marginTop: '1rem', boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;', padding: '15px'}}>
       {Object.entries(groupedHolding).map(([assetClassName, data]) => (
         <Accordion key={assetClassName}>
           <AccordionSummary expandIcon={<ExpandCircleDownIcon />}>
-            <Typography>{`${assetClassName} (${data.length})`}</Typography>
+            <Typography variant="h6" sx={{color: '#1e5061', fontSize: '16px', fontWeight: '800'}}>{`${assetClassName.toUpperCase()} (${data.length})`}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <HoldingTableData data={data} />

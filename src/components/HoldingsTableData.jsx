@@ -11,26 +11,26 @@ import React from "react";
 
 const HoldingsTableData = ({ data }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ borderRadius: '20px'}}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Name of the holding</TableCell>
-            <TableCell>Ticker</TableCell>
-            <TableCell>Average price</TableCell>
-            <TableCell>Market Price</TableCell>
-            <TableCell>Latest change percentage</TableCell>
-            <TableCell>Market Value in Base CCY</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>NAME OF THE HOLDING</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>TICKER</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>AVERAGE PRICE</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>MARKET PRICE</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>LATEST CHANGE PERCENTAGE</TableCell>
+            <TableCell sx={{ fontSize: '14px', color: 'gray', fontWeight: '600'}}>MARKET VALUE IN BASE CCY</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((holding) => (
             <TableRow key={holding.ticker}>
-              <TableCell>{holding.name}</TableCell>
-              <TableCell>{holding.ticker}</TableCell>
-              <TableCell>{holding.avg_price}</TableCell>
-              <TableCell>{holding.market_price}</TableCell>
-              <TableCell>{holding.latest_chg_pct}</TableCell>
+              <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.name}</TableCell>
+              <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.ticker}</TableCell>
+              <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.avg_price}</TableCell>
+              <TableCell sx={{ fontSize: '13px', color: '#1e5061', fontWeight: '600'}}>{holding.market_price}</TableCell>
+              <TableCell sx={{ fontSize: '13px', color: `${holding.latest_chg_pct < 0  ? 'red' : '#1e5061'}`, fontWeight: '600'}}>{holding.latest_chg_pct}</TableCell>
               <TableCell>{holding.market_value_ccy}</TableCell>
             </TableRow>
           ))}
