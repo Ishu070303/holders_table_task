@@ -1,9 +1,9 @@
 <div align="center">
-  <div>
+  <div display="flex">
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
-    <img src="https://logosdownload.com/logo/javascript-logo-big.png" alt="Javascript" />
-    <img src="https://tse1.mm.bing.net/th?id=OIP.rpiHSO8j5Ng9dzobkcvAkQAAAA&pid=Api&P=0&h=180" alt="material ui" />
-    <img src="https://tse4.mm.bing.net/th?id=OIP.TosL0Wayrzj3wS_Jr6m6WAHaC1&pid=Api&P=0&h=180" alt="axios" />
+    <img src="https://logosdownload.com/logo/javascript-logo-big.png" height='200' width='200'  alt="Javascript" />
+    <img src="https://tse1.mm.bing.net/th?id=OIP.rpiHSO8j5Ng9dzobkcvAkQAAAA&pid=Api&P=0&h=180" height='200' width='200' alt="material ui" />
+    <img src="https://tse4.mm.bing.net/th?id=OIP.TosL0Wayrzj3wS_Jr6m6WAHaC1&pid=Api&P=0&h=180"  height='200' width='200'alt="axios" />
   </div>
 
   <h3 align="center">Holder's Table Task </h3>
