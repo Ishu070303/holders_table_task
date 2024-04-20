@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { HoldingTableData } from "./components";
 import axios from "axios";
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from "@mui/material";
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 
 const App = () => {
@@ -18,14 +18,15 @@ const App = () => {
       });
   }, []);
 
-  console.log(holdingData);
+  // console.log(holdingData);
+
   const GroupHolderHandler = () => {
     const groupedHolding = {
       "Real Estate": [],
-      Cash: [],
-      Bond: [],
-      Equity: [],
-      Fund: [],
+      "Cash": [],
+      "Bond": [],
+      "Equity": [],
+      "Fund": [],
     };
 
     holdingData.forEach((holding) => {
@@ -39,9 +40,10 @@ const App = () => {
   };
 
   const groupedHolding = GroupHolderHandler();
+  // console.log(groupedHolding);
 
   return (
-    <Fragment>
+    <Box sx={{ width: '95vw',height: '95vh' , margin: 'auto', marginTop: '1rem', boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;'}}>
       {Object.entries(groupedHolding).map(([assetClassName, data]) => (
         <Accordion key={assetClassName}>
           <AccordionSummary expandIcon={<ExpandCircleDownIcon />}>
@@ -52,7 +54,7 @@ const App = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-    </Fragment>);
+    </Box>);
 };
 
 export default App;
