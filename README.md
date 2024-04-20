@@ -72,5 +72,5 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 
 ## <a name="contribution">❤️ Contribution </a>
-- When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change."Circle Up" 
+- When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change."Holder Table" 
 <br />
