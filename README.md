@@ -1,6 +1,6 @@
 <div align="center">
   <div display="flex">
-    <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png"  height='200' width='200' alt="react.js" />
+    <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png"  height='200' width='300' alt="react.js" />
     <img src="https://logosdownload.com/logo/javascript-logo-big.png" height='200' width='200'  alt="Javascript" />
     <img src="https://tse1.mm.bing.net/th?id=OIP.rpiHSO8j5Ng9dzobkcvAkQAAAA&pid=Api&P=0&h=180" height='200' width='200' alt="material ui" />
     <img src="https://tse4.mm.bing.net/th?id=OIP.TosL0Wayrzj3wS_Jr6m6WAHaC1&pid=Api&P=0&h=180"  height='200' width='200'alt="axios" />
